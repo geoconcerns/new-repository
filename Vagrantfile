@@ -6,7 +6,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 	
-	config.vm.hostname = "curation-concerns"
+	config.vm.hostname = "geo-concerns"
 
 	config.vm.box = "ubuntu/trusty64"
 
@@ -24,6 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", path: "./install_scripts/java.sh", args: shared_dir
   config.vm.provision "shell", path: "./install_scripts/ruby.sh", args: shared_dir
   config.vm.provision "shell", path: "./install_scripts/fits.sh", args: shared_dir
-  config.vm.provision "shell", path: "./install_scripts/curation-concerns.sh", args: shared_dir, privileged: false
+  config.vm.provision "shell", path: "./install_scripts/geo.sh", args: shared_dir
+  config.vm.provision "shell", path: "./install_scripts/geo-concerns.sh", args: shared_dir, privileged: false
 
 end

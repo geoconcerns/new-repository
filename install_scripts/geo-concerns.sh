@@ -1,15 +1,17 @@
 #!/bin/sh
 
-echo "Creating a stock Curation Concerns app"
+echo "Creating a stock Geo Concerns app"
 
 # create a curation-concerns app
-rails new curation-concerns-demo --skip-spring
-cd curation-concerns-demo
-echo "gem 'curation_concerns', github:'projecthydra-labs/curation_concerns', branch: 'master'" >> Gemfile
+rails new geo-concerns-demo --skip-spring
+cd geo-concerns-demo
+sudo gem install simple_mapnik
+echo "gem 'curation_concerns', '1.0.0.beta3'" >> Gemfile
+echo "gem 'geo_concerns', '0.0.5'" >> Gemfile
 bundle install
 yes Y | rails generate curation_concerns:install
+yes Y | rails generate geo_concerns:install
 rake db:migrate
-rails generate curation_concerns:work Book
 
 # start redis
 sudo /etc/init.d/redis-server start
