@@ -16,8 +16,13 @@ rake db:migrate
 # start redis
 sudo /etc/init.d/redis-server start
 
-# start fedora and solr
 SHARED_DIR=$1
-sudo cp $SHARED_DIR/install_scripts/fedora-solr /etc/init.d/
-sudo update-rc.d fedora-solr start 90 2 3 4 5 .
-sudo /etc/init.d/fedora-solr start
+
+# Copy in new Rakefile
+yes | cp -rf $SHARED_DIR/install_scripts/Rakefile .
+
+# Make solr core nonpersistent. Causes errors when solr-wrapper is restarted.
+sed -i 's/persist: true/persist: false/g' .solr_wrapper
+
+# setup fedora and solr
+rake demo:setup

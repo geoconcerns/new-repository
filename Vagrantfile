@@ -26,5 +26,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", path: "./install_scripts/fits.sh", args: shared_dir
   config.vm.provision "shell", path: "./install_scripts/geo.sh", args: shared_dir
   config.vm.provision "shell", path: "./install_scripts/geo-concerns.sh", args: shared_dir, privileged: false
-
+  config.vm.provision "shell", path: "./install_scripts/cleanup.sh", args: shared_dir
+  config.vm.provision "shell", path: "./install_scripts/zerodisk.sh", args: shared_dir
 end
