@@ -6,8 +6,8 @@ echo "Creating a stock Geo Concerns app"
 rails new geo-concerns-demo --skip-spring
 cd geo-concerns-demo
 sudo gem install simple_mapnik
-echo "gem 'curation_concerns', '1.0.0.beta3'" >> Gemfile
-echo "gem 'geo_concerns', '0.0.5'" >> Gemfile
+echo "gem 'curation_concerns', '1.0.0.beta7'" >> Gemfile
+echo "gem 'geo_concerns', '0.0.6'" >> Gemfile
 bundle install
 yes Y | rails generate curation_concerns:install
 yes Y | rails generate geo_concerns:install
