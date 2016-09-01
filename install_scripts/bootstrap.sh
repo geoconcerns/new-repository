@@ -13,14 +13,11 @@ cd $HOME_DIR
 # Update
 apt-get -y update && apt-get -y upgrade
 
-# SSH
-apt-get -y install openssh-server
-
-# Build tools
-apt-get -y install build-essential
-
-# Git vim
-apt-get -y install git vim
-
-# Wget and curl
-apt-get -y install wget curl
+# SSH, build tools, git, vim, wget, and curl
+apt-get -y install \
+	openssh-server \
+	build-essential \
+	git \
+	vim \
+	wget \
+	curl
