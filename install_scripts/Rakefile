@@ -9,17 +9,17 @@ require 'solr_wrapper/rake_task'
 require 'fcrepo_wrapper/rake_task'
 
 namespace :demo do
-  desc "Run fedora, solr, and rails servers for Geo Concerns"
+  desc "Run Fedora, Solr, and Unicorn GeoConcerns"
   task :servers do
     with_server 'development' do
       begin
-        `rails s -b 0.0.0.0`
+        `rails s -b 0.0.0.0 -d`
       rescue Interrupt
         puts "Shutting down..."
       end
     end
   end
-  desc "Setup fedora and solr for Geo Concerns"
+  desc "Install Fedora and Solr"
   task :setup do
     with_server 'development' do
     end
