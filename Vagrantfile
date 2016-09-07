@@ -6,8 +6,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
-  config.vm.hostname = "geoconcerns"
-
   config.vm.box = "geoconcerns/geo-concerns-vagrant-base"
 
   config.vm.network :forwarded_port, guest: 3000, host: 3000 # Rails
