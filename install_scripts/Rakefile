@@ -9,11 +9,11 @@ require 'solr_wrapper/rake_task'
 require 'fcrepo_wrapper/rake_task'
 
 namespace :demo do
-  desc "Run Fedora, Solr, and Unicorn GeoConcerns"
+  desc "Run Fedora, Solr, and Puma for the App."
   task :servers do
     with_server 'development' do
       begin
-        `rails s -b 0.0.0.0 -d`
+        `rails s -b 0.0.0.0`
       rescue Interrupt
         puts "Shutting down..."
       end
