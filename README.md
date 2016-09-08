@@ -11,7 +11,7 @@
 2. `cd geo-concerns-vagrant`
 3. `vagrant up`
 
-You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localhost`
+You can shell into the GeoConcerns machine with `vagrant ssh geoconcerns`, and into the GeoServer machine with `vagrant ssh geoserver`
 
 ## Using GeoConcerns
 
@@ -24,12 +24,16 @@ You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localh
         * Enter your username and password, and click "Sign up" to create your account and sign in.
 	* Once signed in, you can create content by clicking the "+" button in the upper right.
 
+## Using GeoServer
+* Access the server at [http://localhost:8181/geoserver/web/](http://localhost:8181/geoserver/web/).
+
 ## Environment
 
 * Ubuntu 14.04 64-bit base machine
 * A stock [Geo Concerns](https://github.com/projecthydra-labs/geo_concerns) app which can be run at: [http://localhost:3000](http://localhost:3000)
 * [Solr](http://lucene.apache.org/solr/): [http://localhost:8983/solr/](http://localhost:8983/solr/)
 * [Fedora](http://fedorarepository.org/): [http://localhost:8984/](http://localhost:8984/)
+* [GeoServer](http://geoserver.org/) will be run at: [http://localhost:8181/geoserver/web/](http://localhost:8181/geoserver/web/)
 
 ## Build a Demo Vagrant Box
 A script for building a reusable geo-concerns vagrant box is included.
@@ -42,4 +46,4 @@ After building the box, you can move the `demo/` directory to another location (
 
 ## Thanks
 
-This VM is a modified version of [curation-concerns-vagrant](https://github.com/projecthydra-labs/curation-concerns-vagrant). Thanks to @escowles and the other contributors to that project.
+The GeoConcerns VM is a modified version of [curation-concerns-vagrant](https://github.com/projecthydra-labs/curation-concerns-vagrant). Thanks to @escowles and the other contributors to that project.  The GeoServer VM is is the work of @drh-stanford and members of the Stanford University Libraries.
