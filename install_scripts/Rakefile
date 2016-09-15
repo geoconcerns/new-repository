@@ -13,7 +13,7 @@ namespace :demo do
   task :servers do
     with_server 'development' do
       begin
-        `rails s -b 0.0.0.0 -d`
+        `rails s -b 0.0.0.0`
       rescue Interrupt
         puts "Shutting down..."
       end
