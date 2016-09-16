@@ -30,17 +30,8 @@ You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localh
 * A stock [Geo Concerns](https://github.com/projecthydra-labs/geo_concerns) app which can be run at: [http://localhost:3000](http://localhost:3000)
 * [Solr](http://lucene.apache.org/solr/): [http://localhost:8983/solr/](http://localhost:8983/solr/)
 * [Fedora](http://fedorarepository.org/): [http://localhost:8984/](http://localhost:8984/)
-
-## Build a Demo Vagrant Box
-A script for building a reusable geo-concerns vagrant box is included.
-
-1. `./build-demo.sh` (this will take some time to complete)
-2. `cd demo/`
-3. Instructions for starting the machine are the same as above. 
-
-After building the box, you can move the `demo/` directory to another location (such as thumb dive), or leave it in place. All that is needed is the `geo-concerns.box` file and the `Vagrantfile`.
+* [GeoServer](http://geoserver.org/): [http://localhost:8181/geoserver](http://localhost:8181/geoserver)
 
 ## Thanks
 
 This VM is a modified version of [curation-concerns-vagrant](https://github.com/projecthydra-labs/curation-concerns-vagrant). Thanks to @escowles and the other contributors to that project.
-
